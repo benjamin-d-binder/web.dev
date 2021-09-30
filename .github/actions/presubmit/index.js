@@ -39,8 +39,10 @@ async function run() {
       core.notice(`Failed to remove label: ${LABEL}`);
     }
   } else {
-    core.setFailed(`Pull request does not have label: ${LABEL}`);
+    core.notice(`Pull request does not have label: ${LABEL}`);
   }
+
+  core.setOutput('isPresubmit', isPresubmit);
 }
 
 run();
