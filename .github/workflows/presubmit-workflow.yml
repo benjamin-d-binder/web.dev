@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [labeled]
 jobs:
-  check_if_presubmit:
+  presubmit:
     runs-on: ubuntu-latest
     env:
       NODE_OPTIONS: --max_old_space_size=4096
